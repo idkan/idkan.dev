@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { Categories, PostCard, PostWidget } from '../components'
 
 const posts = [{ title: 'React Testing', excerpt: 'This is a test' }, { title: 'React Testing 2', excerpt: 'This is a test 2' }]
 
@@ -13,14 +14,14 @@ export default function Home () {
         <div className='lg:col-span-8 col-span-1'>
           {posts.map((post, index) => (
             <div key={index} className='col-span-12 lg:col-span-6'>
-              <div className='bg-white rounded shadow p-6'>
-                <h3 className='text-xl font-bold mb-4'>{post.title}</h3>
-                <p className='text-gray-700 text-base'>{post.excerpt}</p>
-              </div>
+              <PostCard post={post} />
             </div>
           ))}
           <div className='lg:col-span-4 col-span-1'>
-            <div className='lg:sticky relative top-8' />
+            <div className='lg:sticky relative top-8'>
+              <PostWidget />
+              <Categories />
+            </div>
           </div>
         </div>
 
