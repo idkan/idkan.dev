@@ -5,7 +5,7 @@ const posts = [{ title: 'React Testing', excerpt: 'This is a test' }, { title: '
 
 export default function Home () {
   return (
-    <div className='container mx-auto p-10 mb-8'>
+    <div className='container mx-auto px-10 mb-8'>
       <Head>
         <title>Home</title>
         <link rel='icon' href='/favicon.ico' />
