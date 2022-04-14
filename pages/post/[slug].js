@@ -3,7 +3,6 @@ import { getPosts, getPostDetails } from '../../services'
 import { PostDetails, Categories, PostWidget, Author, Comments, CommentsForm } from '../../components'
 
 const PostView = ({ post }) => {
-  console.log(post)
   return (
     <div className='conatiner mx-auto px-10 mb-8'>
       <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
