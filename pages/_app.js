@@ -1,5 +1,5 @@
 import '../styles/globals.scss'
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Layout } from '../components'
 
 function MyApp ({ Component, pageProps }) {
