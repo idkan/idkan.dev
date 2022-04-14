@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { getCategories } from '../services'
 
 const Header = () => {
@@ -11,7 +11,6 @@ const Header = () => {
     })
   }, [])
 
-  console.log(categories)
   return (
     <div className='container mx-auto px-10 mb-8'>
       <div className='border-b w-full inline-block border-blue-400 py-8'>
