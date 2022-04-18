@@ -20,9 +20,6 @@ export const getPosts = async () => {
               slug
               title
               excerpt
-              featuredImage {
-                url
-              }
               categories {
                 name
                 slug
@@ -55,9 +52,6 @@ export const getPostDetails = async (slug) => {
         slug
         title
         excerpt
-        featuredImage {
-          url
-        }
         categories {
           name
           slug
@@ -79,9 +73,6 @@ export const getRecentPosts = async () => {
       posts(orderBy: createdAt_ASC
         last:3 ) {
           title
-          featuredImage {
-            url
-          }
           createdAt
           slug
         }
@@ -97,9 +88,6 @@ export const getSimilarPosts = async (categories, slug) => {
     query getPostDetails($slug: String!, $categories: [String!]) {
       posts(where: {slug_not: $slug, AND: {categories_some: {slug_in: $categories}}} last:3) {
         title
-        featuredImage {
-          url
-        }
         createdAt
         slug
       }
