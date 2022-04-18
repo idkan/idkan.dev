@@ -46,6 +46,7 @@ export const getPostDetails = async (slug) => {
           bio
           id
           name
+          social
           photo {
             url
           }
