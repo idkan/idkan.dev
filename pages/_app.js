@@ -6,7 +6,7 @@ import ProgressBar from 'react-scroll-progress-bar'
 function MyApp ({ Component, pageProps }) {
   return (
     <>
-      <ProgressBar bgcolor='#438ecb' duration='0.2' />
+      <ProgressBar bgcolor='#22c55e' duration='0.2' />
       <Layout>
         <Component {...pageProps} />
       </Layout>
