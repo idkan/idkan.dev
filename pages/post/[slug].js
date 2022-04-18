@@ -7,13 +7,15 @@ const PostView = ({ post }) => {
     <>
       <div className='container mx-auto px-10 mb-8'>
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
-          <div className='col-span-1 lg:col-span-8'>
+          <div className='col-span-1 lg:col-span-10'>
             <PostDetails post={post} />
+            <hr className='border-b border-gray-200 my-6' />
             <Author author={post.author} />
+            <hr className='border-b border-gray-200 my-6' />
             <CommentsForm slug={post.slug} />
             <Comments slug={post.slug} />
           </div>
-          <div className='col-span-1 lg:col-span-4'>
+          <div className='col-span-1 lg:col-span-2'>
             <div className='relative lg:sticky top-8'>
               <PostWidget slug={post.slug} categories={post.categories.map((category) => category.slug)} />
               <Categories />
