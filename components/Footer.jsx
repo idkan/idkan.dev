@@ -21,7 +21,7 @@ const Footer = () => {
           <Link href='/'>Tech Blog</Link>
         </div>
         <div className='mb-8 text-sm text-gray-500 dark:text-gray-400'>
-          <Image src='/images/shiba.gif' alt='idkan.dev' height='24' width='24' className='w-8 h-8 rounded-full mr-4' />
+          <Image src='/static/images/shiba.gif' alt='idkan.dev' height='24' width='24' className='w-8 h-8 rounded-full mr-4' />
         </div>
       </div>
     </footer>
