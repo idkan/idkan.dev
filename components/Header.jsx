@@ -1,6 +1,8 @@
-import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
+
+import { siteMetadata } from '../data/siteMetadata'
 import { getCategories } from '../services'
+import ThemeSwitcher from './ThemeSwitcher'
 
 const Header = () => {
   const [categories, setCategories] = useState([])
@@ -12,26 +14,30 @@ const Header = () => {
   }, [])
 
   return (
-    <div className='container mx-auto px-10 mb-8'>
-      <div className='border-b w-full inline-block border-blue-400 py-8'>
-        <div className='md:float-left block'>
-          <Link href='/'>
-            <span className='cursor-pointer font-bold text-4xl text-black'>
-              idkan.dev
-            </span>
-          </Link>
-        </div>
-        <div className='hidden md:float-left md:contents'>
-          {categories.map(category => (
-            <Link href={`/category/${category.slug}`} key={category.slug}>
-              <span className='md:float-right mt-2 align-middle text-black ml-4 font-semibold cursor-pointer'>
-                {category.name}
-              </span>
-            </Link>
+    <header className='flex items-center justify-between py-10'>
+      <div>
+        <a href='/' aria-label={siteMetadata.headerTitle}>
+          <div className='flex items-center justify-between'>
+            <div className='mr-3'>
+              LOGO
+            </div>
+            <div className='hidden h-6 text-2xl font-semibold sm:block'>
+              {siteMetadata.headerTitle}
+            </div>
+          </div>
+        </a>
+      </div>
+      <div className='flex items-center text-base leading-5'>
+        <div className='hidden sm:block'>
+          {categories.map((category) => (
+            <a key={category.id} href={`/category/${category.slug}`} className='p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4 hover:text-primary dark:hover:text-primary'>
+              {category.name}
+            </a>
           ))}
         </div>
+        <ThemeSwitcher />
       </div>
-    </div>
+    </header>
   )
 }
 
