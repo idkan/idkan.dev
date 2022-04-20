@@ -9,4 +9,4 @@ In the project directory, you can run: ```npm i && npm start``` to start the dev
 
 <!-- CONTACT -->
 ## Contact
-Abraham Serena - [@idkantv](https://twitter.com/idkandev) -  [idkan.dev](https://idkan.dev/)
+Abraham Serena - [@idkandev](https://twitter.com/idkandev) -  [idkan.dev](https://idkan.dev/)
