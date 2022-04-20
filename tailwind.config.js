@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -7,9 +9,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: 'var(--primary-color)',
-        secondary: 'var(--secondary-color)',
-        secondaryDark: 'var(--secondary-dark-color)'
+        primary: colors.teal,
+        gray: colors.neutral
       }
     }
   },
