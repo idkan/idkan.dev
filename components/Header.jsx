@@ -40,8 +40,8 @@ const Header = () => {
       </div>
       <div className='flex items-center text-base leading-5'>
         <div className='hidden sm:block'>
-          {categories.map((category) => (
-            <a key={category.id} href={`/category/${category.slug}`} className='p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4 hover:text-primary-600 dark:hover:text-primary-600'>
+          {categories.map((category, index) => (
+            <a key={index} href={`/category/${category.slug}`} className='p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4 hover:text-primary-600 dark:hover:text-primary-400'>
               {category.name}
             </a>
           ))}
@@ -60,9 +60,9 @@ const Header = () => {
           >
             <button type='button' aria-label='toggle modal' className='fixed h-full w-full cursor-auto focus:outline-none' onClick={toggleNav} />
             <nav className='fixed mt-8 h-full w-full'>
-              {categories.map((category) => (
-                <div key={category.id} className='px-12 py-4 text-center'>
-                  <a href={`/category/${category.slug}`} className='text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-600'>
+              {categories.map((category, index) => (
+                <div key={index} className='px-12 py-4 text-center'>
+                  <a href={`/category/${category.slug}`} className='text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400'>
                     {category.name}
                   </a>
                 </div>
