@@ -1,6 +1,4 @@
-import React from 'react'
-import { Header } from '.'
-import Footer from './Footer'
+import { Header, Footer } from '.'
 
 const LayoutWrapper = ({ children }) => {
   return (
