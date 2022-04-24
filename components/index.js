@@ -1,10 +1,9 @@
-export { default as PostCard } from './content/PostCard'
-export { default as PostWidget } from './content/PostWidget'
-export { default as Categories } from './content/Categories'
 export { default as Header } from './Header'
 export { default as LayoutWrapper } from './LayoutWrapper'
-export { default as Author } from './content/Author'
-export { default as Comments } from './content/Comments'
-export { default as CommentsForm } from './content/CommentsForm'
-export { default as PostDetails } from './content/PostDetails'
+export { default as Footer } from './Footer'
+
+export { default as Tag } from './content/Tag'
+export { default as ProgressBar } from './content/ProgressBar'
+
+// Helpers
 export { default as ThemeSwitcher } from './content/ThemeSwitcher'
