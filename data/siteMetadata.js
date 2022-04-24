@@ -6,9 +6,11 @@ export const siteMetadata = {
   headerTitle: 'idkan.dev Blog',
   description: 'Web Development, Algorithms, Work Life, and more ⚡️🚀🎨',
   language: 'en-US',
+  locale: 'en-US',
   theme: 'system',
   siteUrl: 'https://idkan.dev',
   siteRepo: 'https://github.com/idkan/idkan.dev',
+  socialMediaBanner: 'https://idkan.dev/social-media-banner.png',
   socialMedia: [
     {
       name: 'Github',
