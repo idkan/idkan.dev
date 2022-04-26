@@ -33,8 +33,10 @@ const Header = () => {
       <div>
         <a href='/' aria-label={siteMetadata.headerTitle}>
           <div className='flex items-center justify-between'>
-            <div className='mr-3 flex justify-center'>
-              {'~/'}{''}
+            <div className='text-xl mr-3 flex justify-center'>
+              <span className='text-primary-500 dark:text-primary-600'>
+                {'~/'}{' '}
+              </span>
               <Typewriter options={{ strings: ['idkan.dev', router.asPath.substring(1)], autoStart: true, loop: true, delay: 100 }} />
             </div>
           </div>
