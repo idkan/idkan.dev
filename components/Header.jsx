@@ -1,22 +1,15 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
 import Typewriter from 'typewriter-effect'
 
 import { siteMetadata } from '../data/siteMetadata'
-import { getCategories } from '../services'
 import { ThemeSwitcher } from '../components'
 import { useRouter } from 'next/router'
+import { headerNavLinks } from '../data/headerNavLinks'
 
 const Header = () => {
   const [showNav, setShowNav] = useState(false)
-  const [categories, setCategories] = useState([])
   const router = useRouter()
-
-  useEffect(() => {
-    getCategories().then((categories) => {
-      setCategories(categories)
-    })
-  }, [])
 
   const toggleNav = () => {
     setShowNav(!showNav)
@@ -37,16 +30,16 @@ const Header = () => {
               <span className='text-primary-500 dark:text-primary-600'>
                 {'~/'}{' '}
               </span>
-              <Typewriter options={{ strings: ['idkan.dev', router.asPath.substring(1)], autoStart: true, loop: true, delay: 100 }} />
+              <Typewriter options={{ strings: [router.asPath.substring(1), 'idkan.dev'], autoStart: true, loop: true, delay: 100 }} />
             </div>
           </div>
         </a>
       </div>
       <div className='flex items-center text-base leading-5'>
         <div className='hidden sm:block'>
-          {categories.map((category, index) => (
-            <a key={index} href={`/category/${category.slug}`} className='p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4 hover:text-primary-600 dark:hover:text-primary-400'>
-              {category.name}
+          {headerNavLinks.map((link, index) => (
+            <a key={index} href={link.href} className='p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4 hover:text-primary-600 dark:hover:text-primary-400'>
+              {link.text}
             </a>
           ))}
         </div>
@@ -57,17 +50,13 @@ const Header = () => {
             <span className='line-menu bg-gray-900 dark:bg-gray-100' />
             <span className='line-menu half end bg-gray-900 dark:bg-gray-100' />
           </button>
-          <div
-            className={`fixed top-24 right-0 z-10 h-full w-full transform bg-gray-200 opacity-95 duration-300 ease-in-out dark:bg-gray-800 ${
-          showNav ? 'translate-x-0' : 'translate-x-full'
-        }`}
-          >
+          <div className={`fixed top-24 right-0 z-10 h-full w-full transform bg-gray-200 opacity-95 duration-300 ease-in-out dark:bg-gray-800 ${showNav ? 'translate-x-0' : 'translate-x-full'}`}>
             <button type='button' aria-label='toggle modal' className='fixed h-full w-full cursor-auto focus:outline-none' onClick={toggleNav} />
             <nav className='fixed mt-8 h-full w-full'>
-              {categories.map((category, index) => (
+              {headerNavLinks.map((link, index) => (
                 <div key={index} className='px-12 py-4 text-center'>
-                  <a href={`/category/${category.slug}`} className='text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400'>
-                    {category.name}
+                  <a href={link.href} className='text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400'>
+                    {link.text}
                   </a>
                 </div>
               ))}
