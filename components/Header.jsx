@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react'
 
+import Typewriter from 'typewriter-effect'
+
 import { siteMetadata } from '../data/siteMetadata'
 import { getCategories } from '../services'
 import { ThemeSwitcher } from '../components'
+import { useRouter } from 'next/router'
 
 const Header = () => {
   const [showNav, setShowNav] = useState(false)
   const [categories, setCategories] = useState([])
+  const router = useRouter()
 
   useEffect(() => {
     getCategories().then((categories) => {
@@ -29,11 +33,9 @@ const Header = () => {
       <div>
         <a href='/' aria-label={siteMetadata.headerTitle}>
           <div className='flex items-center justify-between'>
-            <div className='mr-3'>
-              LOGO
-            </div>
-            <div className='hidden h-6 text-2xl font-semibold sm:block'>
-              {siteMetadata.headerTitle}
+            <div className='mr-3 flex justify-center'>
+              {'~/'}{''}
+              <Typewriter options={{ strings: ['idkan.dev', router.asPath.substring(1)], autoStart: true, loop: true, delay: 100 }} />
             </div>
           </div>
         </a>
