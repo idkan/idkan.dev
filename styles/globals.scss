@@ -46,3 +46,19 @@
   }
 }
 
+.gradient {
+  background: radial-gradient(hsl(200 100% 60%), hsl(300 100% 60%)) fixed;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} 
+
+html.dark {
+  .gradient {
+    background: radial-gradient(hsl(200 100% 60%), hsl(100 100% 60%)) fixed;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  } 
+}
+
