@@ -1,7 +1,6 @@
 import NextImage from 'next/image'
 import { PageSEO } from '../components/analytics/SEO'
 import { Experience, SocialIcon } from '../components'
-import Greetings from '../components/ui/Greetings'
 
 export default function AuthorLayout ({ children, frontMatter }) {
   const { name, avatar, occupation, company, location, twitter, linkedin, instagram, github } = frontMatter
@@ -25,7 +24,7 @@ export default function AuthorLayout ({ children, frontMatter }) {
               className='h-48 w-48 rounded-full'
             />
             <h3 className='pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight'>
-              I'm {name}
+              {name}
               <span role='img' aria-label='waving hand' className='wave'>&nbsp;👋🏻</span>
             </h3>
             <div className='text-gray-500 dark:text-gray-400'>{occupation}</div>
@@ -39,8 +38,6 @@ export default function AuthorLayout ({ children, frontMatter }) {
             </div>
           </div>
           <div className='prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2'>
-            <Greetings />
-            <br />
             {children}
           </div>
         </div>
