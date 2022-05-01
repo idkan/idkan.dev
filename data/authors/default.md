@@ -3,7 +3,7 @@ name: Abraham Serena
 avatar: /static/images/authors/avatar.jpeg
 occupation: Software Engineer
 location: 'WFH, México'
-company: Kwan Tecnologies
+company: Kwan Technology
 twitter: https://twitter.com/idkandev
 linkedin: https://www.linkedin.com/in/abraham-serena/
 github: https://github.com/idkan
