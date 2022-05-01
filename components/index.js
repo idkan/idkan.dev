@@ -8,6 +8,9 @@ export { default as Tag } from './content/Tag'
 
 // UI
 export { default as ProgressBar } from './ui/ProgressBar'
+export { default as Experience } from './ui/Experience'
+export { default as SocialIcon } from './ui/SocialIcon'
+export { deafult as Greetings } from './ui/Greetings'
 
 // Helpers
 export { default as ThemeSwitcher } from './content/ThemeSwitcher'
