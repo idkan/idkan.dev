@@ -47,18 +47,58 @@
 }
 
 .gradient {
-  background: radial-gradient(hsl(200 100% 60%), hsl(300 100% 60%)) fixed;
+  background: radial-gradient(hsl(200 100% 60%), hsl(300 50% 60%)) fixed;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  span {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 } 
 
 html.dark {
   .gradient {
-    background: radial-gradient(hsl(200 100% 60%), hsl(100 100% 60%)) fixed;
+    background: radial-gradient(hsl(100 100% 60%), hsl(200 100% 60%)) fixed;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   } 
 }
 
+/* https://jarv.is/notes/css-waving-hand-emoji/ */
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.667s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
