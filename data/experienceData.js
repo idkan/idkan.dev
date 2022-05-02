@@ -40,5 +40,4 @@ export const experienceData = [
       'Use Maven to build and test the application and run SQL scripts into the database.'
     ]
   }
-
 ]
