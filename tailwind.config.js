@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: colors.blue,
+        primary: colors.emerald,
         gray: colors.neutral
       },
       fontSize: {
