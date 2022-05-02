@@ -1,11 +1,12 @@
-import React from 'react'
 import { BsGithub, BsTwitter, BsLinkedin, BsInstagram } from 'react-icons/bs'
+import { FiExternalLink } from 'react-icons/fi'
 
 const components = {
   github: BsGithub,
   twitter: BsTwitter,
   linkedin: BsLinkedin,
-  instagram: BsInstagram
+  instagram: BsInstagram,
+  external: FiExternalLink
 }
 
 const SocialIcon = ({ kind, href, size = 24 }) => {
@@ -16,7 +17,7 @@ const SocialIcon = ({ kind, href, size = 24 }) => {
   return (
     <a href={href} target='_blank' rel='noopener noreferrer'>
       <span className='sr-only'>{kind}</span>
-      {Icon && <Icon size={size} className='text-gray-700 hover:text-primary-500 dark:text-gray-200 dark:hover:text-primary-400' />}
+      {Icon && <Icon size={size} className='text-gray-700 hover:text-primary-500 transition dark:text-gray-200 dark:hover:text-primary-400' />}
     </a>
   )
 }
