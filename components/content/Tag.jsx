@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import { kebabCase } from '../../lib/utils/kebabCaseFormat'
 
-const Tag = ({ text }) => {
+const Tag = ({ tag }) => {
   return (
-    <Link href={`/tag/${kebabCase(text)}`}>
+    <Link href={`/tag/${kebabCase(tag)}`}>
       <a className='mr-3 text-sm font-medium uppercase text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'>
-        {text}
+        {tag}
       </a>
     </Link>
   )
