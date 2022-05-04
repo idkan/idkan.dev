@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useState } from 'react'
-import { Tag } from '../components'
+import { Pagination, Tag } from '../components'
 import { formatDate } from '../lib/utils/formatDate'
 
 export default function ListLayout ({ posts, title, initialDisplayPosts = [], pagination }) {
@@ -74,21 +74,7 @@ export default function ListLayout ({ posts, title, initialDisplayPosts = [], pa
         </ul>
       </div>
       {pagination && pagination.totalPages > 1 && !searchValue && (
-        <div className='flex justify-center py-6'>
-          <nav className='space-x-4'>
-            <Link href={`/blog?page=${pagination.currentPage - 1}`}>
-              <a className='text-base font-medium leading-6 text-gray-500 hover:text-gray-900 dark:text-gray-400 focus:outline-none focus:text-gray-900 focus:bg-gray-50 focus:border-gray-300 dark:focus:text-gray-100 dark:focus:bg-gray-50 dark:focus:border-gray-300'>
-                Previous
-              </a>
-            </Link>
-            <Link href={`/blog?page=${pagination.currentPage + 1}`}>
-              <a className='text-base font-medium leading-6 text-gray-500 hover:text-gray-900 dark:text-gray-400 focus:outline-none focus:text-gray-900 focus:bg-gray-50 focus:border-gray-300 dark:focus:text-gray-100 dark:focus:bg-gray-50 dark:focus:border-gray-300'>
-                Next
-              </a>
-            </Link>
-          </nav>
-        </div>
-
+        <Pagination totalPages={pagination.totalPages} currentPage={pagination.currentPage} />
       )}
     </>
 
