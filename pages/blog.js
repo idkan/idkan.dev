@@ -3,7 +3,7 @@ import { siteMetadata } from '../data/siteMetadata'
 import ListLayout from '../layouts/ListLayout'
 import { getAllFilesFrontMatter } from '../lib/mdx'
 
-const MAX_POSTS_PER_PAGE = 5
+export const MAX_POSTS_PER_PAGE = 5
 
 export async function getStaticProps () {
   const posts = await getAllFilesFrontMatter('blog')
