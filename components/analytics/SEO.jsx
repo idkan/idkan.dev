@@ -47,3 +47,22 @@ export const PageSEO = ({ title, description }) => {
     />
   )
 }
+
+export const TagSEO = ({ title, description }) => {
+  const ogImageUrl = `${siteMetadata.siteUrl}/social-media-banner.png`
+  const twImageUrl = `${siteMetadata.siteUrl}/social-media-banner.png`
+  const router = useRouter()
+
+  return (
+    <>
+      <CommonSEO
+        title={title}
+        description={description}
+        ogType='website'
+        ogImage={ogImageUrl}
+        twImage={twImageUrl}
+        canonicalUrl={`${siteMetadata.siteUrl}${router.asPath}`}
+      />
+    </>
+  )
+}
