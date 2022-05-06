@@ -2,8 +2,12 @@ import { TagSEO } from '../../components/analytics/SEO'
 import { siteMetadata } from '../../data/siteMetadata'
 import ListLayout from '../../layouts/ListLayout'
 import { getAllFilesFrontMatter } from '../../lib/mdx'
+import generateRss from '../../lib/rss'
 import { getAllTags } from '../../lib/tags'
 import { kebabCase } from '../../lib/utils/kebabCaseFormat'
+
+import path from 'path'
+import fs from 'fs'
 
 const root = process.cwd()
 
@@ -26,7 +30,13 @@ export async function getStaticProps ({ params }) {
     post.draft !== true && post.tags.map((tag) => kebabCase(tag)).includes(params.tag)
   )
 
-  // TODO: Add RSS generator
+  if (filteredPosts.length > 0) {
+    const rss = generateRss(filteredPosts, `tags/${params.tag}/feed.xml`)
+    const rssPath = path.join(root, 'public', 'tags', params.tag)
+
+    fs.mkdirSync(rssPath, { recursive: true })
+    fs.writeFileSync(path.join(rssPath, 'feed.xml'), rss)
+  }
 
   return {
     props: {
