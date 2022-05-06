@@ -63,6 +63,14 @@ export const TagSEO = ({ title, description }) => {
         twImage={twImageUrl}
         canonicalUrl={`${siteMetadata.siteUrl}${router.asPath}`}
       />
+      <Head>
+        <link
+          rel='alternate'
+          type='application/rss+xml'
+          title={`${siteMetadata.title} - RSS feed`}
+          href={`${siteMetadata.siteUrl}/${router.asPath}/feed.xml`}
+        />
+      </Head>
     </>
   )
 }
