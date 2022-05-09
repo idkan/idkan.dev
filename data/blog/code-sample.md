@@ -1,7 +1,7 @@
 ---
 title: Sample.md file
 date: '2022-04-23'
-authors: [ 'John Doe' ]
+authors: [ 'johndoe' ]
 tags: ['markdown', 'code', 'features']
 draft: false
 summary: Example of a markdown file with code blocks and syntax highlighting
