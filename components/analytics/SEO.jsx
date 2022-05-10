@@ -74,3 +74,75 @@ export const TagSEO = ({ title, description }) => {
     </>
   )
 }
+
+export const BlogSEO = ({ authorDetails, title, summary, date, lastModified, url, images = [], canonicalUrl }) => {
+  const router = useRouter()
+  const publishedAt = new Date(date).toISOString()
+  const modifiedAt = new Date(lastModified || date).toISOString()
+
+  const imagesArray = images.length === 0 ? [siteMetadata.socialMediaBanner] : typeof images === 'string' ? [images] : images
+  const featuredImages = imagesArray.map(image => {
+    return {
+      '@type': 'ImageObject',
+      url: `${siteMetadata.siteUrl}${image}`
+    }
+  })
+
+  let authorList
+  if (authorDetails) {
+    authorList = authorDetails.map(author => {
+      return {
+        '@type': 'Person',
+        name: author.name
+      }
+    })
+  } else {
+    authorList = {
+      '@type': 'Person',
+      name: siteMetadata.author
+    }
+  }
+
+  const structuredData = {
+    '@context': 'http://schema.org',
+    '@type': 'BlogPosting',
+    headline: title,
+    image: featuredImages,
+    datePublished: publishedAt,
+    dateModified: modifiedAt,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': url || `${siteMetadata.siteUrl}${router.asPath}`
+    },
+    author: authorList,
+    publisher: {
+      '@type': 'Organization',
+      name: siteMetadata.title,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteMetadata.siteUrl}/${siteMetadata.siteLogo}`
+      }
+    },
+    description: summary
+  }
+
+  const twImageUrl = featuredImages[0].url
+
+  return (
+    <>
+      <CommonSEO
+        title={title}
+        description={summary}
+        ogType='article'
+        ogImage={featuredImages}
+        twImage={twImageUrl}
+        canonicalUrl={canonicalUrl || `${siteMetadata.siteUrl}${router.asPath}`}
+      />
+      <Head>
+        {date && <meta property='article:published_time' content={publishedAt} />}
+        {lastModified && <meta property='article:modified_time' content={modifiedAt} />}
+        <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData, null, 2) }} />
+      </Head>
+    </>
+  )
+}
