@@ -10,6 +10,7 @@ export const siteMetadata = {
   theme: 'system',
   siteUrl: 'https://idkan.dev',
   siteRepo: 'https://github.com/idkan/idkan.dev',
+  siteLogo: '/static/images/logo.png',
   socialMediaBanner: 'https://idkan.dev/social-media-banner.png',
   socialMedia: [
     {
