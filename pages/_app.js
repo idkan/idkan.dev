@@ -1,4 +1,7 @@
 import '../styles/globals.scss'
+import '../styles/prism.css'
+
+import 'katex/dist/katex.css'
 
 import { ThemeProvider } from 'next-themes'
 import Head from 'next/head'
