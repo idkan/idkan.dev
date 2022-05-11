@@ -13,5 +13,11 @@ export { default as ProgressBar } from './ui/ProgressBar'
 export { default as Experience } from './ui/Experience'
 export { default as SocialIcon } from './ui/SocialIcon'
 
-// Helpers
+// Content
 export { default as ThemeSwitcher } from './content/ThemeSwitcher'
+
+// Helpers
+export { default as TOCInline } from './helper/TocInline'
+export { default as CustomLink } from './helper/CustomLink'
+export { default as Image } from './helper/Image'
+export { default as Pre } from './helper/Pre'
