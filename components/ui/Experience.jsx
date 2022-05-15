@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { experienceData } from '../../data/experienceData'
+import { Link } from '../'
 
 const Experience = () => {
   return (
@@ -17,7 +18,7 @@ const Experience = () => {
               <span className='text-gray-500 dark:text-gray-400'>{experience.title}</span>
               <span className='text-gray-500 dark:text-gray-400'>&nbsp;@&nbsp;</span>
               <span className='text-primary-500 dark:text-primary-400'>
-                <a href={experience.companyUrl} target='_blank' rel='noopener noreferrer' className='no-underline'>{experience.company}</a>
+                <Link href={experience.companyUrl} className='no-underline'>{experience.company}</Link>
               </span>
             </div>
             <div>
