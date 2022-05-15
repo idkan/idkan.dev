@@ -21,9 +21,9 @@ export default function Home ({ posts }) {
       <div className='divide-y divide-gray-200 dark:dive-gray-700'>
         <div className='space-y-2 pt-6 pb-8 md:space-y-5'>
           <div className='gap-y-3 gradient text-center font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-12'>
-            <span className='md:text-10xl text-6xl block'>Blog.</span>
-            <span className='md:text-10xl text-6xl block'>Portfolio.</span>
-            <span className='md:text-10xl text-6xl block'>Tech.</span>
+            <span className='md:text-9xl text-6xl block'>Blog.</span>
+            <span className='md:text-9xl text-6xl block'>Portfolio.</span>
+            <span className='md:text-9xl text-6xl block'>Tech.</span>
           </div>
           <p className='text-lg pt-10 leading-7 text-gray-500 dark:text-gray-400'>
             {siteMetadata.description}
@@ -48,8 +48,8 @@ export default function Home ({ posts }) {
                         <div className='space-y-2'>
                           <div>
                             <h2 className='text-2xl font-bold leading-8 tracking-tight'>
-                              <Link href={`/blog/${slug}`}>
-                                <a className='text-gray-900 dark:text-gray-100'>{title}</a>
+                              <Link href={`/blog/${slug}`} className='text-gray-900 dark:text-gray-100'>
+                                {title}
                               </Link>
                             </h2>
                             <div className='flex flex-wrap'>
@@ -63,10 +63,8 @@ export default function Home ({ posts }) {
                           </div>
                         </div>
                         <div className='text-base font-medium leading-6'>
-                          <Link href={`/blog/${slug}`}>
-                            <a className='text-primary-500 hover:text-primary-600 dark:hover:text-primary-400' aria-label={`Read "${title}`}>
-                              Read more &rarr;
-                            </a>
+                          <Link href={`/blog/${slug}`} className='text-primary-500 hover:text-primary-600 dark:hover:text-primary-400' aria-label={`Read "${title}`}>
+                            Read more &rarr;
                           </Link>
                         </div>
                       </div>

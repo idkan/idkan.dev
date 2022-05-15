@@ -1,7 +1,6 @@
 import NextImage from 'next/image'
-import Link from 'next/link'
 import { siteMetadata } from '../data/siteMetadata'
-import { Tag } from '../components/index'
+import { Tag, Link } from '../components/'
 import { BlogSEO } from '../components/analytics/SEO'
 
 export default function PostLayout ({ frontMatter, authorDetails, prevPost, nextPost, children }) {
@@ -64,9 +63,9 @@ export default function PostLayout ({ frontMatter, authorDetails, prevPost, next
                         <dt className='sr-only'>Twitter</dt>
                         <dd>
                           {author.twitter && (
-                            <a href={author.twitter} target='_blank' rel='noopener noreferrer' className='text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'>
+                            <Link href={author.twitter} className='text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'>
                               {author.twitter.replace('https://twitter.com/', '@')}
-                            </a>
+                            </Link>
                           )}
                         </dd>
                       </dl>
@@ -118,9 +117,7 @@ export default function PostLayout ({ frontMatter, authorDetails, prevPost, next
                           Next Article
                         </h2>
                         <div className='text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'>
-                          <Link href={`/blog/${nextPost.slug}`}>
-                            <a href={`/blog/${nextPost.slug}`}>{nextPost.title}</a>
-                          </Link>
+                          <Link href={`/blog/${nextPost.slug}`}>{nextPost.title}</Link>
                         </div>
                       </div>
                     )}
@@ -128,12 +125,7 @@ export default function PostLayout ({ frontMatter, authorDetails, prevPost, next
                 )}
               </div>
               <div className='pt-4 xl:pt-8'>
-                <Link
-                  href='/blog'
-                  className='text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'
-                >
-                  <a href='/blog'>&larr; Back to the blog</a>
-                </Link>
+                <Link href='/blog' className='text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'>&larr; Back to the blog</Link>
               </div>
             </footer>
           </div>

@@ -1,6 +1,5 @@
-import Link from 'next/link'
 import { useState } from 'react'
-import { Pagination, Tag } from '../components'
+import { Link, Pagination, Tag } from '../components'
 import { formatDate } from '../lib/utils/formatDate'
 
 export default function ListLayout ({ posts, title, initialDisplayPosts = [], pagination }) {
@@ -53,9 +52,7 @@ export default function ListLayout ({ posts, title, initialDisplayPosts = [], pa
                   <div className='space-y-3 xl:col-span-3'>
                     <div>
                       <h3 className='text-2xl font-bold leading-8 tracking-tight'>
-                        <Link href={`/blog/${slug}`}>
-                          <a className='text-gray-900 dark:text-gray-100'>{title}</a>
-                        </Link>
+                        <Link href={`/blog/${slug}`} className='text-gray-900 dark:text-gray-100'>{title}</Link>
                       </h3>
                       <div className='flex flex-wrap'>
                         {tags.map((tag) => (
