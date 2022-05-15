@@ -13,7 +13,6 @@ export async function getStaticProps () {
 }
 
 export default function Tags ({ tags }) {
-  console.log(tags)
   const sortedTags = Object.keys(tags).sort((a, b) => tags[b] - tags[a])
   return (
     <>
@@ -30,10 +29,8 @@ export default function Tags ({ tags }) {
             return (
               <div key={tag} className='my-2 mr-5'>
                 <Tag tag={tag} />
-                <Link href={`/tags/${kebabCase(tag)}`}>
-                  <a className='text-gray-600 dark:text-gray-400 hover:text-gray-900'>
-                    {`(${tags[tag]})`}
-                  </a>
+                <Link href={`/tags/${kebabCase(tag)}`} className='text-gray-600 dark:text-gray-400 hover:text-gray-900'>
+                  {`(${tags[tag]})`}
                 </Link>
               </div>
             )
