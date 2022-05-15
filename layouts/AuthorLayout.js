@@ -1,6 +1,5 @@
-import NextImage from 'next/image'
 import { PageSEO } from '../components/analytics/SEO'
-import { Experience, SocialIcon } from '../components'
+import { Experience, SocialIcon, Image } from '../components'
 
 export default function AuthorLayout ({ children, frontMatter }) {
   const { name, avatar, occupation, company, location, twitter, linkedin, instagram, github } = frontMatter
@@ -16,7 +15,7 @@ export default function AuthorLayout ({ children, frontMatter }) {
         </div>
         <div className='items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0'>
           <div className='flex flex-col items-center pt-8'>
-            <NextImage
+            <Image
               src={avatar}
               alt='avatar'
               width='192px'
