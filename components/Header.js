@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
+import { useRouter } from 'next/router'
 
 import Typewriter from 'typewriter-effect'
 
+import { Link, ThemeSwitcher } from '../components'
 import { siteMetadata } from '../data/siteMetadata'
-import { ThemeSwitcher } from '../components'
-import { useRouter } from 'next/router'
 import { headerNavLinks } from '../data/headerNavLinks'
 
 const Header = () => {
@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <header className='flex items-center justify-between py-6'>
       <div>
-        <a href='/' aria-label={siteMetadata.headerTitle}>
+        <Link href='/' aria-label={siteMetadata.headerTitle}>
           <div className='flex items-center justify-between'>
             <div className='text-xl mr-3 flex justify-center'>
               <span className='text-primary-500 dark:text-primary-600'>
@@ -33,14 +33,14 @@ const Header = () => {
               <Typewriter options={{ strings: [router.asPath.substring(1), 'idkan.dev'], autoStart: true, loop: true, delay: 100 }} />
             </div>
           </div>
-        </a>
+        </Link>
       </div>
       <div className='flex items-center text-base leading-5'>
         <div className='hidden sm:block'>
           {headerNavLinks.map((link, index) => (
-            <a key={index} href={link.href} className='p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4 hover:text-primary-600 dark:hover:text-primary-400'>
-              {link.text}
-            </a>
+            <Link key={index} href={link.href} className='p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4 hover:text-primary-600 dark:hover:text-primary-400'>
+              {link.title}
+            </Link>
           ))}
         </div>
         <ThemeSwitcher />
@@ -55,9 +55,9 @@ const Header = () => {
             <nav className='fixed mt-8 h-full w-full'>
               {headerNavLinks.map((link, index) => (
                 <div key={index} className='px-12 py-4 text-center'>
-                  <a href={link.href} className='text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400'>
-                    {link.text}
-                  </a>
+                  <Link href={link.href} onClick={toggleNav} className='text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400'>
+                    {link.title}
+                  </Link>
                 </div>
               ))}
             </nav>
