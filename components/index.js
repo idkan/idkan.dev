@@ -17,7 +17,7 @@ export { default as SocialIcon } from './ui/SocialIcon'
 export { default as ThemeSwitcher } from './content/ThemeSwitcher'
 
 // Helpers
-export { default as TOCInline } from './helper/TocInline'
-export { default as CustomLink } from './helper/CustomLink'
+export { default as TOCInline } from './helper/TOCInline'
+export { default as Link } from './helper/Link'
 export { default as Image } from './helper/Image'
 export { default as Pre } from './helper/Pre'
