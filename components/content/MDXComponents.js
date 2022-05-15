@@ -1,12 +1,12 @@
 import { useMemo } from 'react'
 import { getMDXComponent } from 'mdx-bundler/client'
 
-import { Image, TOCInline, CustomLink, Pre } from '../index'
+import { Image, TOCInline, Link, Pre } from '../index'
 
 export const MDXComponents = {
   Image,
   TOCInline,
-  a: CustomLink,
+  a: Link,
   pre: Pre,
   wrapper: ({ components, layout, ...rest }) => {
     const Layout = require(`../../layouts/${layout}`).default
