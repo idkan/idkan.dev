@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { Link } from '../'
 
 const Pagination = ({ totalPages, currentPage }) => {
   const prevPage = parseInt(currentPage) - 1 > 0
@@ -14,9 +14,7 @@ const Pagination = ({ totalPages, currentPage }) => {
         )}
         {prevPage && (
           <Link href={currentPage - 1 === 1 ? '/blog/' : `/blog/page/${currentPage - 1}`}>
-            <a rel='previous' className='cursor-pointer'>
-              Previous
-            </a>
+            <button rel='previous' className='cursor-pointer'>Previous</button>
           </Link>
         )}
         <span>{currentPage} of {totalPages} </span>
@@ -27,9 +25,7 @@ const Pagination = ({ totalPages, currentPage }) => {
         )}
         {nextPage && (
           <Link href={`/blog/page/${currentPage + 1}`}>
-            <a rel='next' className='cursor-pointer'>
-              Next
-            </a>
+            <button rel='next' className='cursor-pointer'>Next</button>
           </Link>
         )}
       </nav>
