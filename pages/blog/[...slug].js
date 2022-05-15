@@ -1,7 +1,9 @@
 import fs from 'fs'
+
 import generateRss from '../../lib/rss'
+
 import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '../../lib/mdx'
-import { MDXLayoutRenderer } from '../../components/content/MDXLayoutRender'
+import { MDXLayoutRenderer } from '../../components/content/MDXComponents'
 
 const DEFAULT_LAYOUT = 'PostLayout'
 
