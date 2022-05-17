@@ -15,6 +15,8 @@ export { default as SocialIcon } from './ui/SocialIcon'
 
 // Content
 export { default as ThemeSwitcher } from './content/ThemeSwitcher'
+export { default as PostContent } from './content/PostContentWrapper'
+export { default as PostHeader } from './content/PostHeaderWrapper'
 
 // Helpers
 export { default as TOCInline } from './helper/TOCInline'
