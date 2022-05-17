@@ -85,7 +85,7 @@ export default function PostLayout ({ frontMatter, authorDetails, prevPost, next
               </div>
               {/* <Comments frontMatter={frontMatter} /> */}
             </div>
-            <footer>
+            <div className='footer'>
               <div className='divide-gray-200 text-sm font-medium leading-5 dark:divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y'>
                 {tags && (
                   <div className='py-4 xl:py-8'>
@@ -127,7 +127,7 @@ export default function PostLayout ({ frontMatter, authorDetails, prevPost, next
               <div className='pt-4 xl:pt-8'>
                 <Link href='/blog' className='text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'>&larr; Back to the blog</Link>
               </div>
-            </footer>
+            </div>
           </div>
         </div>
       </article>
