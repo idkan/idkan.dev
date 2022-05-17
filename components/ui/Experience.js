@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { experienceData } from '../../data/experienceData'
-import { Link } from '../'
+import { Link } from '..'
 
 const Experience = () => {
   return (
