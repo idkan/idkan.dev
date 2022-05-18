@@ -3,8 +3,6 @@ import { ScrollTopAndComment, PostAuthors, PostContent, PostHeader } from '../co
 import { BlogSEO } from '../components/analytics/SEO'
 
 export default function PostLayout ({ frontMatter, authorDetails, prevPost, nextPost, children }) {
-  const { fileName } = frontMatter
-
   return (
     <div className='max-w-3xl px-4 mx-auto sm:px-6 xl:max-w-5xl xl:px-0'>
       <BlogSEO
@@ -21,7 +19,7 @@ export default function PostLayout ({ frontMatter, authorDetails, prevPost, next
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
             <PostAuthors authorDetails={authorDetails} />
-            <PostContent postData={children} tags={frontMatter.tags} prevPost={prevPost} nextPost={nextPost} />
+            <PostContent postData={children} prevPost={prevPost} nextPost={nextPost} props={frontMatter} />
           </div>
         </div>
       </article>
