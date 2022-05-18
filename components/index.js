@@ -12,11 +12,13 @@ export { default as Pagination } from './content/Pagination'
 export { default as ProgressBar } from './ui/ProgressBar'
 export { default as Experience } from './ui/Experience'
 export { default as SocialIcon } from './ui/SocialIcon'
+export { default as ScrollTopAndComment } from './ui/ScrollTopAndComment'
 
 // Content
 export { default as ThemeSwitcher } from './content/ThemeSwitcher'
 export { default as PostContent } from './content/PostContentWrapper'
 export { default as PostHeader } from './content/PostHeaderWrapper'
+export { default as PostAuthors } from './content/PostAuthorsWrapper'
 
 // Helpers
 export { default as TOCInline } from './helper/TOCInline'
