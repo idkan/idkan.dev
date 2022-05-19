@@ -16,9 +16,10 @@ export { default as ScrollTopAndComment } from './ui/ScrollTopAndComment'
 
 // Content
 export { default as ThemeSwitcher } from './content/ThemeSwitcher'
-export { default as PostContent } from './content/PostContentWrapper'
-export { default as PostHeader } from './content/PostHeaderWrapper'
-export { default as PostAuthors } from './content/PostAuthorsWrapper'
+export { default as PostContent } from './content/post/PostContentWrapper'
+export { default as PostHeader } from './content/post/PostHeaderWrapper'
+export { default as PostAuthors } from './content/post/PostAuthorsWrapper'
+export { default as Comments } from './content/Comments'
 
 // Helpers
 export { default as TOCInline } from './helper/TOCInline'
