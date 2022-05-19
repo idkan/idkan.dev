@@ -1,4 +1,4 @@
-import { formatDate } from '../../lib/utils/formatDate'
+import { formatDate } from '../../../lib/utils/formatDate'
 
 export default function Header ({ date, title }) {
   return (

@@ -1,4 +1,4 @@
-import { Image, Link } from '../'
+import { Image, Link } from '../../'
 
 export default function PostAuthors ({ authorDetails }) {
   return (

@@ -1,5 +1,5 @@
-import { Tag, Link } from '..'
-import { siteMetadata } from '../../data/siteMetadata'
+import { Tag, Link, Comments } from '../../'
+import { siteMetadata } from '../../../data/siteMetadata'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
 const shareOnTwitter = (title, url) => `https://twitter.com/share?url=${url}&text="${title}" por @idkandev`
@@ -21,7 +21,7 @@ export default function Post ({ postData, prevPost, nextPost, props }) {
             </svg>
           </Link>
         </div>
-        {/* <Comments frontMatter={frontMatter} /> */}
+        <Comments />
       </div>
       <div className='footer'>
         <div className='divide-gray-200 text-sm font-medium leading-5 dark:divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y'>
