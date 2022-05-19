@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react'
 import { useTheme } from 'next-themes'
 
 import { siteMetadata } from '../../../data/siteMetadata'
+import { Image } from '../../'
 
 const Giscus = () => {
   const [showComments, setShowComments] = useState(true)
@@ -48,7 +49,21 @@ const Giscus = () => {
 
   return (
     <div className='pt-6 pb-6 text-center text-gray-700 dark:text-gray-300'>
-      {showComments && <button onClick={loadComments}>Load Comments</button>}
+      {showComments && (
+        <button onClick={loadComments}>
+          <div className='mb-8 text-sm text-gray-500 dark:text-gray-400 flex items-center gap-4 hover:underline'>
+            Load Comments?
+            <Image src='/static/images/Comments.gif' alt='idkan.dev' height='24' width='24' className='w-8 h-8 rounded-full ml-4' />
+          </div>
+        </button>
+      )}
+      {/* hide comments */}
+      <button onClick={() => setShowComments(false)}>
+        <div className='mb-8 text-sm text-gray-500 dark:text-gray-400 flex items-center gap-4 hover:underline'>
+          Hide Comments?
+          <Image src='/static/images/Comments.gif' alt='idkan.dev' height='24' width='24' className='w-8 h-8 rounded-full ml-4' />
+        </div>
+      </button>
       <div id={COMMENTS_ID} className='giscus-frame' />
     </div>
   )
