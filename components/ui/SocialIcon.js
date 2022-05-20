@@ -9,7 +9,7 @@ const components = {
   external: FiExternalLink
 }
 
-const SocialIcon = ({ kind, href, size = 24 }) => {
+const SocialIcon = ({ kind, href, size = 6 }) => {
   if (!href || (kind === 'mail' && !/^mailto:\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(href))) { return null }
 
   const SocialSvg = components[kind]
