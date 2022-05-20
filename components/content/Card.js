@@ -21,10 +21,10 @@ const Card = ({ title, description, imgSrc, href, github, tech }) => {
             </div>
             <div className='flex flex-row justify-between'>
               <div className='mx-1'>
-                {href ? <SocialIcon kind='external' href={href} size='1.25rem' /> : null}
+                {href ? <SocialIcon kind='external' href={href} size='6' /> : null}
               </div>
               <div className='mx-1'>
-                {github ? <SocialIcon kind='github' href={github} size='1.25rem' /> : null}
+                {github ? <SocialIcon kind='github' href={github} size='6' /> : null}
               </div>
             </div>
           </div>
