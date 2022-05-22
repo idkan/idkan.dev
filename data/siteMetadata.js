@@ -3,6 +3,7 @@ import { BsGithub, BsTwitter, BsLinkedin, BsInstagram } from 'react-icons/bs'
 export const siteMetadata = {
   title: 'idkan dev 👨‍💻 | Backend, Frontend, JavaScript, Algorithms , Work Life',
   author: 'Abraham Serena',
+  email: 'abraham.serena.lk@gmail.com',
   headerTitle: 'idkan.dev Blog',
   description: 'Web Development, Algorithms, Work Life, and more ⚡️🚀🎨',
   language: 'en-US',
