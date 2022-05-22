@@ -13,7 +13,7 @@ const Footer = () => {
             </Link>
           ))}
         </div>
-        <div className='mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400'>
+        <div className='mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400 text-center'>
           <Link href='/' className='hover:text-primary-600'>{siteMetadata.author}</Link>
           <div>{' • '}</div>
           <div>{`Copyright © ${new Date().getFullYear()}`}</div>

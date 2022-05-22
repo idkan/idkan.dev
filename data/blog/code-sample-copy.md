@@ -1,9 +1,11 @@
 ---
 title: Sample.md file 2
 date: '2022-04-23'
+authors: [ 'default', 'johndoe' ]
 tags: ['markdown', 'code', 'features', 'next js']
 draft: false
 summary: Example of a markdown file with code blocks and syntax highlighting
+layout: PostLayout
 ---
 
 A sample post with markdown.

@@ -5,6 +5,7 @@ authors: [ 'johndoe' ]
 tags: ['markdown', 'code', 'features']
 draft: false
 summary: Example of a markdown file with code blocks and syntax highlighting
+layout: SimpleLayout
 ---
 
 A sample post with markdown.

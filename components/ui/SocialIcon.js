@@ -1,15 +1,15 @@
 import { BsGithub, BsTwitter, BsLinkedin, BsInstagram } from 'react-icons/bs'
-import { FiExternalLink } from 'react-icons/fi'
+import { BiLinkExternal } from 'react-icons/bi'
 
 const components = {
   github: BsGithub,
   twitter: BsTwitter,
   linkedin: BsLinkedin,
   instagram: BsInstagram,
-  external: FiExternalLink
+  external: BiLinkExternal
 }
 
-const SocialIcon = ({ kind, href, size = 24 }) => {
+const SocialIcon = ({ kind, href, size = 6 }) => {
   if (!href || (kind === 'mail' && !/^mailto:\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(href))) { return null }
 
   const SocialSvg = components[kind]
