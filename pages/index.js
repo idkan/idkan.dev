@@ -1,15 +1,22 @@
-import Link from 'next/link'
+import fs from 'fs'
 
-import { Tag } from '../components/index'
+import { Tag, Link } from '../components/index'
 import { PageSEO } from '../components/analytics/SEO'
 import { siteMetadata } from '../data/siteMetadata'
 import { getAllFilesFrontMatter } from '../lib/mdx'
 import { formatDate } from '../lib/utils/formatDate'
+import generateRSS from '../lib/rss'
 
 const MAX_POSTS_PER_PAGE = 5
 
 export async function getStaticProps () {
   const posts = await getAllFilesFrontMatter('blog')
+
+  // Generate RSS feed
+  if (posts.length > 0) {
+    const rss = generateRSS(posts)
+    fs.writeFileSync('./public/feed.xml', rss)
+  }
 
   return { props: { posts } }
 }
@@ -63,8 +70,8 @@ export default function Home ({ posts }) {
                           </div>
                         </div>
                         <div className='text-base font-medium leading-6'>
-                          <Link href={`/blog/${slug}`} className='text-primary-500 hover:text-primary-600 dark:hover:text-primary-400' aria-label={`Read "${title}`}>
-                            Read more &rarr;
+                          <Link href={`/blog/${slug}`} className='text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400' aria-label={`Read "${title}`}>
+                            Read more <span>&rarr;</span>
                           </Link>
                         </div>
                       </div>
