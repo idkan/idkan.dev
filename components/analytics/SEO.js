@@ -28,6 +28,7 @@ const CommonSEO = ({ title, description, ogType, ogImage, twImage, canonicalUrl 
       <meta name='twitter:description' content={description} />
       <meta name='twitter:image' content={twImage} />
       <meta name='twitter:image:alt' content={description} />
+      <meta charset='UTF-8' />
       <link rel='canonical' href={canonicalUrl || `${siteMetadata.siteUrl}${router.asPath}`} />
     </Head>
   )
