@@ -1,5 +1,5 @@
 import { BsFolder } from 'react-icons/bs'
-import { SocialIcon } from '..'
+import { Link, SocialIcon } from '..'
 
 const Card = ({ title, description, imgSrc, href, github, tech }) => {
   return (
@@ -17,7 +17,9 @@ const Card = ({ title, description, imgSrc, href, github, tech }) => {
               </div>
             )}
             <div className='my-2'>
-              <BsFolder className='text-primary-500 dark:text-primary-400 h-10 w-10' />
+              <Link href={github}>
+                <BsFolder className='text-primary-500 h-10 w-10 hover:text-primary-600 dark:hover:text-primary-400' />
+              </Link>
             </div>
             <div className='flex flex-row justify-between'>
               <div className='mx-1'>
