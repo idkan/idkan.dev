@@ -19,7 +19,7 @@ export default function ScrollTopAndComment () {
   }
 
   const handleScrollToComment = () => {
-    const comment = document.getElementById('comment')
+    const comment = document.getElementById('comments-container')
     if (comment) {
       comment.scrollIntoView({ behavior: 'smooth' })
     }
