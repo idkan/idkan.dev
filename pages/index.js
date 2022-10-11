@@ -1,11 +1,11 @@
 import fs from 'fs'
 
-import { Tag, Link } from '../components/index'
 import { PageSEO } from '../components/analytics/SEO'
+import { Link, Tag } from '../components/index'
 import { siteMetadata } from '../data/siteMetadata'
 import { getAllFilesFrontMatter } from '../lib/mdx'
-import { formatDate } from '../lib/utils/formatDate'
 import generateRSS from '../lib/rss'
+import { formatDate } from '../lib/utils/formatDate'
 
 const MAX_POSTS_PER_PAGE = 5
 
@@ -55,7 +55,7 @@ export default function Home ({ posts }) {
                         <div className='space-y-2'>
                           <div>
                             <h2 className='text-2xl font-bold leading-8 tracking-tight'>
-                              <Link href={`/blog/${slug}`} className='text-gray-900 dark:text-gray-100'>
+                              <Link href={`/blog/${slug}`} className='hover'>
                                 {title}
                               </Link>
                             </h2>

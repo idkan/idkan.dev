@@ -102,3 +102,30 @@ html.dark {
     transform: rotate(0deg);
   }
 }
+
+html.dark{
+  .hover {
+    color: #0000;
+    background: linear-gradient(90deg,rgb(16 185 129 / var(--tw-text-opacity)) 50%,#ffff 0) var(--_p,100%)/200% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: .4s;
+    &:hover {
+      --_p: 0%;
+    }
+  }
+}
+
+
+html.light{
+  .hover {
+    color: #0000;
+    background: linear-gradient(90deg,rgb(16 185 129 / var(--tw-text-opacity)) 50%,#000 0) var(--_p,100%)/200% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: .4s;
+    &:hover {
+      --_p: 0%;
+    }
+  }
+}
