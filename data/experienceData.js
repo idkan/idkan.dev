@@ -7,7 +7,12 @@ export const experienceData = [
     rangeDate: 'Apr 2022 - Present',
     description: [
       'Developing and maintaining software for scheduling and managing the operations of multiple companies.',
-      'Working with a variety of technologies, including Java, JavaScript, React, to name a few.'
+      'Working with a variety of technologies, including Java, JavaScript, React, to name a few.',
+      'Cooperate in the implementation of the architecture and the technical specifications of our employee scheduling and management tools and systems.',
+      'Perform the development of technological solutions by using best practices and by respecting guidelines and processes in software development and information security.',
+      'Participate in all stages of software development, from analysis to delivery and production support.',
+
+
     ]
   },
   {
