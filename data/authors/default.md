@@ -10,10 +10,9 @@ github: https://github.com/idkan
 instagram: https://www.instagram.com/idkan.dev
 ---
 
-As someone who is highly focused on improving/learning personal and working skill daily. I'm thrilled at the opportunity to show off my potential as a software engineer.
+As a highly motivated and dedicated software engineer, I am constantly seeking opportunities to improve my skills and knowledge in the field. I am excited about the chance to showcase my abilities and potential as a software developer.
+I thrive when faced with challenging projects that require me to think outside of my comfort zone and expand my skill set. I am passionate about learning new technologies and programming languages, and I am always on the lookout for new development techniques to improve my craft.
 
-<br />
-I enjoy being challenged and engaging with project that require me to work outside my comfort and knowledge set, as continuing to learn new technologies/programming languages and development techniques are important to my self.
+In addition to being an enthusiastic coder, I am also a responsible and proactive team player who is easy to work with. I have a creative mindset, and I am always looking for ways to automate repetitive tasks and optimize processes. I believe that this attention to detail and efficiency is essential to creating the best solutions on the market.
 
-<br />
-I consider myself like code enthusiast, responsible, proactive, creative, motivated, easy adaptation to teamwork and organization. I will sometimes obsess over ways to automate the most superficial tasks and to improve those processes that I will take almost the time it would've taken me to do the task itself, with the advantage that next time I would finish in a fraction of the time so I believe that this quality is essential to continue creating the best solutions on the market.
+I am also well-versed in Agile development methodologies and have experience in working in Scrum teams. I have experience in mentoring junior developers and leading small projects. I am highly organized and efficient in my work, and I always strive to deliver high-quality results on time.
